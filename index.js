@@ -11,6 +11,7 @@ const path = require('path');
 // const authRoutes = require('./routes/authRoutes')
 // this will activate the file, creating the model
 require('./models/User');
+require('./models/Survey');
 require('./services/passport');
 
 mongoose.connect(keys.mongoURI, {
@@ -48,6 +49,7 @@ if (process.env.NODE_ENV === 'production') {
 // the require returns a function because thats how its defined in authRoutes
 require('./routes/authRoutes')(app);
 require('./routes/billingRoutes')(app);
+require('./routes/surveyRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);

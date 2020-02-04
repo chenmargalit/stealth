@@ -12,7 +12,8 @@ module.exports = function(app) {
         '/api/logout',
         '/face',
         '/api/current_user',
-        '/api/strip'
+        '/api/strip',
+        '/api/surveys'
       ],
       {
         target: 'http://localhost:5000'
