@@ -14,6 +14,9 @@ import App from './components/App';
 // third is middlewares
 const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
+const axios = require('axios');
+window.axios = axios;
+
 // React dom takes u parameters. First is the app's instance, the instance of the class
 // The second is a reference to an existing dom node in the html file. The id of the div in the html file,
 // (comes automatically with create react app) is named root. You can see this in index.html in public folder
